@@ -6,7 +6,7 @@
     <title>Jaken Pon</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css">      <!-- iosevka font -->
-    <link rel="icon" type="image/png" href="images/all.jpg">
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
 </head>
 <body>
     <h1>~ Janken Pon ~</h1>
@@ -18,8 +18,8 @@
                     <img class="player-avatar" src="images/player.webp" alt="avatar" width="48px" height="48px">
                     <p class="player-name">You</p>
                 </div>
-                <img class="your-result-image" src="images/default.gif" alt="your-selection"  width="200px" height="200px"175px>
-                <p class="your-score">X</p>
+                <img id="your-result-image" class="result-image" src="images/default.gif" alt="your-selection"  width="200px" height="200px"175px>
+                <p id="your-score">0</p>
             </div>
             <div class="vs-result">
                 <p class="vs-text">VS</p>
@@ -29,12 +29,12 @@
                     <img class="player-avatar" src="images/computer.png" alt="avatar" width="48px" height="48px">
                     <p class="player-name">Computer</p>
                 </div>
-                <img class="computer-result-image" src="images/default.gif" alt="computer-selection" width="200px" height="200px">
-                <p class="computer-score">Y</p>
+                <img id="computer-result-image" class="result-image" src="images/default.gif" alt="computer-selection" width="200px" height="200px">
+                <p id="computer-score">0</p>
             </div>
         </div>
         <div class="reason">
-            <p class="reason-text">Make Your First Move Noobie</p>
+            <p id="reason-text" class="reason-text">Make Your First Move Noobie</p>
         </div>
     </div>
 
@@ -42,13 +42,13 @@
         <p class="option-statement">Select Your Move</p>
         <div class="player-options">
             <div class="option">
-                <img class="option-image" src="images/rock.png" alt="Rock" width="150px" height="150px">
+                <img class="option-image" src="images/rock.png" onclick="playJanken('rock')" alt="Rock" width="150px" height="150px">
             </div>
             <div class="option">
-                <img class="option-image" src="images/paper.png" alt="Paper" width="150px" height="150px">
+                <img class="option-image" src="images/paper.png" onclick="playJanken('paper')" alt="Paper" width="150px" height="150px">
             </div>
             <div class="option">
-                <img class="option-image" src="images/scissors.png" alt="Scissors" width="150px" height="150px">
+                <img class="option-image" src="images/scissors.png" onclick="playJanken('scissors')" alt="Scissors" width="150px" height="150px">
             </div>
         </div>
     </div>
