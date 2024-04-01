@@ -44,7 +44,7 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 53px;
+    gap: 58px;
 }
 
 .player-result {
@@ -76,6 +76,11 @@ h1 {
     background-color: #313131;
     font-family: NorseBold;
     padding:  0px 8px;
+}
+
+.your-result-image, .computer-result-image {
+    border: 3px #ffc341 solid;
+    /* box-shadow: inset 2px 2px 10px #313131 ;                       not working */
 }
 
 .vs-result {
@@ -120,7 +125,6 @@ h1 {
     padding: 0px 8px;
 }
 
-
 .player-options-container {
     position: relative;
     display: flex;
@@ -146,6 +150,23 @@ h1 {
     font-size: 22px;
     font-weight: 500;
     padding: 0px 8px;
+}
+
+.option {
+    display: block;
+    border: 3px #ffc341 solid;
+    box-shadow: inset 1px 1px 10px #313131;
+    overflow: hidden;
+}
+
+.option-image {
+    display: block;
+    transition-duration: 300ms;
+}
+
+.option:hover .option-image {
+    transform-origin: center center;
+    transform: scale(1.2);
 }
 
 .footer {
